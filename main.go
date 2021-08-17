@@ -22,6 +22,7 @@ var regexes = `
     "Facebook Access Token": "EAACEdEose0cBA[0-9A-Za-z]+",
     "Facebook OAuth": "[fF][aA][cC][eE][bB][oO][oO][kK].*['|\"][0-9a-f]{32}['|\"]",
     "GitHub": "[gG][iI][tT][hH][uU][bB].*['|\"][0-9a-zA-Z]{35,40}['|\"]",
+    "GitHub Token": "ghp_[a-zA-Z0-9]{30,40}",
     "Generic API Key": "[aA][pP][iI]_?[kK][eE][yY].*['|\"][0-9a-zA-Z]{32,45}['|\"]",
     "Generic Secret": "[sS][eE][cC][rR][eE][tT].*['|\"][0-9a-zA-Z]{32,45}['|\"]",
     "Google API Key": "AIza[0-9A-Za-z\\-_]{35}",
