@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"flag"
 	"fmt"
 	"io/ioutil"
 	"os"
@@ -54,9 +55,19 @@ var regexes = `
 }`
 
 func main() {
+	var rxfile string
+
+	flag.StringVar(&rxfile, "r", "", "path to a file containing regexes in JSON format")
+	flag.Parse()
+
 	r := os.Stdin
 
 	b, _ := ioutil.ReadAll(r)
+
+	if rxfile != "" {
+		br, _ := ioutil.ReadFile(rxfile)
+		regexes = string(br)
+	}
 
 	var result map[string]interface{}
 	json.Unmarshal([]byte(regexes), &result)
