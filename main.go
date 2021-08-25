@@ -73,7 +73,7 @@ func main() {
 	json.Unmarshal([]byte(regexes), &result)
 
 	for key, element := range result {
-		rx := regexp.MustCompile(fmt.Sprintf("%v", element))
+		rx := regexp.MustCompile(fmt.Sprintf("(?i)%v", element))
 		matched := rx.FindAll(b, -1)
 		if len(matched) > 0 {
 			for _, match := range matched {
