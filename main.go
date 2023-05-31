@@ -70,7 +70,11 @@ func main() {
 	}
 
 	var result map[string]interface{}
-	json.Unmarshal([]byte(regexes), &result)
+	err := json.Unmarshal([]byte(regexes), &result)
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
 
 	for key, element := range result {
 		rx := regexp.MustCompile(fmt.Sprintf("(?i)%v", element))

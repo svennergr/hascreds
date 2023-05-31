@@ -40,5 +40,5 @@
   "Twilio API Key": "SK[0-9a-fA-F]{32}",
   "Twitter Access Token": "[tT][wW][iI][tT][tT][eE][rR].*[1-9][0-9]+-[0-9a-zA-Z]{40}",
   "Twitter OAuth": "[tT][wW][iI][tT][tT][eE][rR].*['|\"][0-9a-zA-Z]{35,44}['|\"]",
-  "test":"test"
+  "auth_header_1":"authorization:[ ]?[\\w .\\-\\/]+"
 }
